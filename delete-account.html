@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حذف الحساب · Delete Account — مصاريف</title>
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button class="lang-toggle" onclick="toggleLang()"><span class="ar">English</span><span class="en">العربية</span></button>
+
+<div class="legal-hero">
+  <h1><span class="ar">حذف الحساب والبيانات</span><span class="en">Delete Account & Data</span></h1>
+  <p><span class="ar">تطبيق مصاريف · Masareef</span><span class="en">Masareef App</span></p>
+</div>
+
+<div class="legal">
+  <a class="back-link" href="index.html">→ <span class="ar">العودة للرئيسية</span><span class="en">Back to home</span></a>
+
+  <!-- AR -->
+  <div class="ar">
+    <p>تطبيق <strong>مصاريف (Masareef)</strong> يتيح لك حذف حسابك وكل بياناتك نهائيًا في أي وقت — من داخل التطبيق مباشرة أو بمراسلتنا.</p>
+
+    <h2>الطريقة الأولى: من داخل التطبيق</h2>
+    <ol style="padding-inline-start:24px;color:#33425f;font-size:17px;line-height:1.9">
+      <li>افتح تطبيق <strong>مصاريف</strong> وسجّل الدخول بحسابك.</li>
+      <li>اذهب إلى <strong>الإعدادات</strong> ← قسم <strong>الحساب</strong>.</li>
+      <li>اضغط <strong>«حذف الحساب والبيانات»</strong> ثم أكّد.</li>
+    </ol>
+
+    <h2>الطريقة الثانية: بالبريد</h2>
+    <p>راسلنا من بريدك على <a href="mailto:Hello@wusool.cc" style="color:var(--blue);font-weight:700">Hello@wusool.cc</a> بطلب حذف الحساب، وسننفّذه خلال مدة قصيرة.</p>
+
+    <h2>ما الذي يُحذف؟</h2>
+    <ul>
+      <li>حسابك (المصادقة) نهائيًا.</li>
+      <li>كل بياناتك السحابية: الراتب، المصاريف، الأهداف، المحافظ.</li>
+      <li>بياناتك المحلية المخزّنة على الجهاز.</li>
+    </ul>
+
+    <h2>ما الذي قد يبقى؟</h2>
+    <p>إحصائيات تشغيل مجمّعة ومجهولة الهوية فقط (غير مرتبطة بك). تُحذف بياناتك نهائيًا فور الطلب، وتُمحى أي نسخ احتياطية خلال <strong>90 يومًا</strong> كحدٍّ أقصى.</p>
+
+    <p style="margin-top:24px">للاستفسار: <a href="mailto:Hello@wusool.cc" style="color:var(--blue);font-weight:700">Hello@wusool.cc</a></p>
+  </div>
+
+  <!-- EN -->
+  <div class="en">
+    <p>The <strong>Masareef</strong> app lets you permanently delete your account and all your data at any time — directly inside the app or by emailing us.</p>
+
+    <h2>Option 1: Inside the app</h2>
+    <ol style="padding-inline-start:24px;color:#33425f;font-size:17px;line-height:1.9">
+      <li>Open the <strong>Masareef</strong> app and sign in to your account.</li>
+      <li>Go to <strong>Settings</strong> → <strong>Account</strong> section.</li>
+      <li>Tap <strong>“Delete account &amp; data”</strong> and confirm.</li>
+    </ol>
+
+    <h2>Option 2: By email</h2>
+    <p>Email us from your account address at <a href="mailto:Hello@wusool.cc" style="color:var(--blue);font-weight:700">Hello@wusool.cc</a> requesting account deletion, and we'll process it shortly.</p>
+
+    <h2>What is deleted?</h2>
+    <ul>
+      <li>Your account (authentication) — permanently.</li>
+      <li>All your cloud data: salary, expenses, goals, wallets.</li>
+      <li>Your local data stored on the device.</li>
+    </ul>
+
+    <h2>What may be kept?</h2>
+    <p>Only anonymous, aggregate usage metrics (not linked to you). Your data is deleted immediately upon request, and any backups are purged within a maximum of <strong>90 days</strong>.</p>
+
+    <p style="margin-top:24px">Questions: <a href="mailto:Hello@wusool.cc" style="color:var(--blue);font-weight:700">Hello@wusool.cc</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="foot-base">© 2026 مصاريف · Masareef</div>
+  </div>
+</footer>
+
+<script>
+function toggleLang(){
+  const h=document.documentElement;
+  const en=h.getAttribute('data-lang')==='en';
+  h.setAttribute('data-lang',en?'ar':'en');
+  h.setAttribute('lang',en?'ar':'en');
+  h.setAttribute('dir',en?'rtl':'ltr');
+}
+</script>
+</body>
+</html>
