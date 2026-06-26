@@ -171,3 +171,29 @@ footer{background:var(--navy);color:#cdd8f3;padding:56px 0 34px}
 [data-lang="en"] .ar{display:none}
 [data-lang="ar"] .en{display:none}
 [data-lang="en"]{direction:ltr}
+
+/* ── App-store download buttons ─────────────────────────────── */
+.store-row{display:flex;gap:12px;flex-wrap:wrap}
+.store-btn{display:inline-flex;align-items:center;gap:11px;background:#0b1220;color:#fff;
+  border:1px solid rgba(255,255,255,.16);border-radius:15px;padding:10px 20px;text-decoration:none;
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.store-btn:hover{transform:translateY(-2px);background:#000;box-shadow:0 14px 30px rgba(0,0,0,.28)}
+.store-logo{width:26px;height:26px;flex:none}
+.store-txt{display:flex;flex-direction:column;line-height:1.12;text-align:start}
+.store-txt small{font-size:11px;font-weight:500;opacity:.85;letter-spacing:.2px}
+.store-txt b{font-size:18px;font-weight:700}
+
+/* ── "Coming soon" modal ────────────────────────────────────── */
+.modal-overlay{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;
+  padding:22px;background:rgba(15,23,42,.55);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.modal-overlay.show{display:flex}
+.modal{background:#fff;border-radius:26px;max-width:430px;width:100%;padding:34px 28px;text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.32);animation:modalPop .25s ease}
+@keyframes modalPop{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-ico{font-size:50px;line-height:1;margin-bottom:6px}
+.modal h3{font-size:23px;font-weight:800;margin:8px 0 12px;color:#0f172a}
+.modal p{color:#475569;font-size:16px;line-height:1.85;margin-bottom:24px}
+.modal-btn{display:inline-block;background:#2F6BFF;color:#fff;border:none;cursor:pointer;
+  font-family:inherit;font-size:16px;font-weight:700;padding:13px 36px;border-radius:14px;
+  transition:transform .15s ease,box-shadow .15s ease}
+.modal-btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(47,107,255,.4)}

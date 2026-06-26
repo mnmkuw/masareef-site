@@ -29,7 +29,7 @@
 <header class="hero" id="top">
   <div class="container hero-grid">
     <div>
-      <span class="badge-pill">✨ <span class="ar">متوفر قريبًا على App Store</span><span class="en">Coming soon to the App Store</span></span>
+      <span class="badge-pill">✨ <span class="ar">متوفّر الآن على App Store</span><span class="en">Available now on the App Store</span></span>
       <h1>
         <span class="ar">تحكّم بمصاريفك<br>بكل بساطة</span>
         <span class="en">Master your money,<br>effortlessly</span>
@@ -38,9 +38,23 @@
         <span class="ar">حدّد راتبك، خطّط ميزانيتك الأسبوعية، سجّل مصاريفك بثوانٍ، ادّخر لأهدافك، واعرف أين يذهب مالك بالضبط — عربيٌّ أولًا وأنيق.</span>
         <span class="en">Set your salary, plan a weekly budget, log expenses in seconds, save toward goals, and see exactly where your money goes — beautifully, Arabic-first.</span>
       </p>
-      <div class="cta-row">
-        <a class="btn btn-white" href="#features">🚀 <span class="ar">اكتشف المميزات</span><span class="en">Explore features</span></a>
-        <a class="btn btn-ghost" href="#contact"><span class="ar">تواصل معنا</span><span class="en">Get in touch</span></a>
+      <div class="store-row">
+        <a class="store-btn" href="https://apps.apple.com/kw/app/masareef-expense-tracker/id6778533443" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <svg class="store-logo" viewBox="0 0 384 512" aria-hidden="true"><path fill="#fff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span class="store-txt"><small><span class="ar">حمّله من</span><span class="en">Download on the</span></small><b>App Store</b></span>
+        </a>
+        <a class="store-btn" href="#" onclick="showPlaySoon(event)" aria-label="Get it on Google Play">
+          <svg class="store-logo" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#00C3FF" d="M3.6 1.3C3.3 1.6 3.1 2 3.1 2.6v18.8c0 .6.2 1 .5 1.3l.1.1L14.2 12.1v-.2z"/>
+            <path fill="#FFD500" d="M17.7 15.6l-3.5-3.5v-.2l3.5-3.5.1.1 4.2 2.4c1.2.7 1.2 1.8 0 2.5z"/>
+            <path fill="#00F076" d="M17.8 15.5L14.2 12 3.7 22.8c.4.4 1.1.5 1.9.1z"/>
+            <path fill="#FF3A44" d="M17.8 8.5 5.6 1.1C4.8.7 4.1.8 3.7 1.2L14.2 12z"/>
+          </svg>
+          <span class="store-txt"><small><span class="ar">حمّله من</span><span class="en">GET IT ON</span></small><b>Google Play</b></span>
+        </a>
+      </div>
+      <div class="cta-row" style="margin-top:16px">
+        <a class="btn btn-ghost" href="#features"><span class="ar">اكتشف المميزات</span><span class="en">Explore features</span></a>
       </div>
     </div>
     <div class="phone-wrap">
@@ -131,7 +145,22 @@
   </div>
 </footer>
 
+<!-- GOOGLE PLAY "COMING SOON" MODAL -->
+<div class="modal-overlay" id="playModal" onclick="if(event.target===this)hidePlaySoon()">
+  <div class="modal">
+    <div class="modal-ico">⏳</div>
+    <h3><span class="ar">قريبًا على Google Play</span><span class="en">Coming soon to Google Play</span></h3>
+    <p>
+      <span class="ar">خلال أيام قليلة سيتم قبول التطبيق على Google Play. يرجى العودة لتحميله من جديد خلال الأيام القادمة. 🙏</span>
+      <span class="en">The app will be approved on Google Play within a few days. Please come back to download it in the coming days. 🙏</span>
+    </p>
+    <button class="modal-btn" onclick="hidePlaySoon()"><span class="ar">حسنًا</span><span class="en">Got it</span></button>
+  </div>
+</div>
+
 <script>
+function showPlaySoon(e){ e.preventDefault(); document.getElementById('playModal').classList.add('show'); }
+function hidePlaySoon(){ document.getElementById('playModal').classList.remove('show'); }
 function toggleLang(){
   const h=document.documentElement;
   const en=h.getAttribute('data-lang')==='en';
